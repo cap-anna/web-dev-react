@@ -1,8 +1,8 @@
 {
-  "name": "cap-react-training-presentation",
+  "name": "slides",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://cap-react-trainings.github.io",
+  "homepage": "https://cap-anna.github.io/web-dev-react/",
   "scripts": {
     "dev": "vite --port 3003",
     "build": "tsc && vite build",
