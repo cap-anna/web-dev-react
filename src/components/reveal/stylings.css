@@ -1,0 +1,37 @@
+:root {
+  --r-main-font: Ubuntu, sans-serif;
+  --r-heading-font: Ubuntu, sans-serif;
+  --r-main-font-size: 2rem;
+}
+
+pre[class*='language-'] {
+  padding: 0.4em 0.4em 0.4em unset !important;
+  font-size: 0.4em !important;
+  /* margin: 0 auto !important; */
+}
+
+.reveal pre code {
+  /* Reset some reveal settings, since we use prismjs instead of highlightjs. */
+  overflow: initial;
+  padding: 0;
+  font-size: 1.25em;
+}
+
+.reveal .slide-number {
+  left: 8px;
+  font-size: 18px;
+  right: unset;
+}
+
+/* Copy to clipboard button */
+div.code-toolbar > .toolbar {
+  top: 0;
+  right: 0;
+  transform: translateX(-40px);
+}
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  font-size: 0.4em;
+  background: rgb(39 40 35);
+  border: 1px solid #bbb;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "cap-react-training-presentation",
+  "private": true,
+  "version": "0.0.0",
+  "homepage": "https://cap-react-trainings.github.io",
+  "scripts": {
+    "dev": "vite --port 3003",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "prismjs": "^1.28.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reveal.js": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "@vitejs/plugin-react": "^1.0.7",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.6.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
+  }
+}
