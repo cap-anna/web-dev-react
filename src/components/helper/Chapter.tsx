@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Slide from '../../components/reveal/Slide';
+import Slide from '../reveal/Slide';
 
 export interface GenericChapterProps {
   title: string;
