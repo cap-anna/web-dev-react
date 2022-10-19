@@ -90,6 +90,23 @@ const ComparisonChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
   return (
     <Chapter {...props}>
       <Slide>
+        <h2>Single Page Applications (SPAs)</h2>
+        <ul>
+          <li className='fragment'>
+            website or webapp that dynmically rewrites a current page with new data from the server instead of having a web browser load
+            entire new pages
+          </li>
+          <li className='fragment'>Popular examples: Gmail, Netflix, Airbnb, PayPal, ...</li>
+          <li className='fragment'>client-side loading: server has to send less data</li>
+        </ul>
+        <img src='./slide-assets/spa.png' alt='' className='fragment' width={'60%'} />
+        <small className='fragment'>https://www.bloomreach.com/en/blog/2018/what-is-a-single-page-application</small>
+        <aside className='notes'>
+          general advantages: better UX due to smoothness, improved performance, consistency, reduced dev time, lower infrastructure costs
+          (client does the calculations)
+        </aside>
+      </Slide>
+      <Slide>
         <h2>Some number crunching</h2>
       </Slide>
       <Slide>
@@ -140,13 +157,13 @@ const ComparisonChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
       </Slide>
       <Slide>
         <h2>Github Stars</h2>
-        <img src='./slide-assets/framework-github-starts.png' />
-        <small>https://www.codeinwp.com/blog/angular-vs-vue-vs-react/</small>
+        <img src='./slide-assets/star-history-github.png' width={'60%'} />
+        <small>https://star-history.com/#facebook/react&vuejs/vue&angular/angular&sveltejs/svelte&Date</small>
       </Slide>
       <Slide>
-        <h2>Stackoverflow</h2>
-        <img src='./slide-assets/framework-stackoverflow.png' />
-        <small>https://scand.com/company/blog/top-5-front-end-development-frameworks/</small>
+        <h2>Github Repos and their TechStack</h2>
+        <img src='./slide-assets/github-repos-dependency.png' width={'60%'} />
+        <small>https://star-history.com/#facebook/react&vuejs/vue&angular/angular&sveltejs/svelte&Date</small>
       </Slide>
       <Slide>
         <h2>npm downloads</h2>
@@ -154,14 +171,10 @@ const ComparisonChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
         <small>https://os-system.com/blog/best-front-end-frameworks-for-web-development/</small>
       </Slide>
       <Slide>
-        <h2>user satisfaction</h2>
-        <img src='./slide-assets/framework-dx.png' />
-        <small>https://os-system.com/blog/best-front-end-frameworks-for-web-development/</small>
-      </Slide>
-      <Slide>
         <h2>jobs</h2>
         <img src='./slide-assets/framework-jobs.png' />
         <small>https://www.codeinwp.com/blog/angular-vs-vue-vs-react/</small>
+        <aside className='notes'>many enterprise setups depend on ng.</aside>
       </Slide>
       <Slide>
         <h2>More Details</h2>

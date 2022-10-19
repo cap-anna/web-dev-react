@@ -24,6 +24,14 @@ const children = `const element = (
   )
   `;
 
+const interfaceExample = `interface Book {
+  id: number;
+  title: string;
+  author: string;
+  releaseDate: string;
+  inStore: boolean;
+}`;
+
 const JsxChapter: React.FC<GenericChapterProps> = (props: GenericChapterProps) => {
   return (
     <Chapter {...props} subtitle={<p>Templating with JavaScript</p>}>
@@ -57,6 +65,22 @@ const JsxChapter: React.FC<GenericChapterProps> = (props: GenericChapterProps) =
           <li>empty tags may be closed immediatly with `{'/>'}`</li>
           <li>JavaScript can be used inside JSX ({`{}`})</li>
         </ul>
+      </Slide>
+      <Slide>
+        <h2>TypeScript</h2>
+        <ul>
+          <li className='fragment'>
+            adds additional syntax to JavaScript to support a tighter integration with your editor ➡️ early error catching
+          </li>
+          <li className='fragment'>Code converts to JS ➡️ runs anywhere JS runs (brower, node, deno, ...)</li>
+        </ul>
+        <Code className='fragment'>{interfaceExample}</Code>
+      </Slide>
+      <Slide>
+        <h2>💪 Exercise</h2>
+        <p>
+          Let's create a React-App using <a href='https://vitejs.dev/guide/'>vite as bundler </a> and play a little bit with TypeScript
+        </p>
       </Slide>
     </Chapter>
   );

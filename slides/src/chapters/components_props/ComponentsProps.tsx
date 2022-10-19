@@ -125,22 +125,8 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
   return (
     <Chapter {...props} subtitle={<p>JavaScript functions, accept Props and return React Elements (JSX)</p>}>
       <Slide>
-        <h2>Class Components vs. Functional Components</h2>
+        <h2>Components</h2>
         <Code className='fragment'>{fnExample}</Code>
-        <Code className='fragment'>{classExample}</Code>
-        <p className='fragment'>same output</p>
-      </Slide>
-      <Slide>
-        <h2>Class Components vs. Functional Components</h2>
-        <p className='fragment'>Whats the difference? When should I use which one?</p>
-        <ul className='fragment'>
-          <li>historical reasons: no state-management / lifecycle hooks before 2019 in functional components</li>
-          <li>nowadays: hardly any usage of class components</li>
-          <li>functional components are easier to read and test, less code, better performance</li>
-        </ul>
-        <a href='https://www.twilio.com/blog/react-choose-functional-components' target='_blank' className='fragment' rel='noreferrer'>
-          🚀 understanding functional components vs class components
-        </a>
       </Slide>
       <Slide>
         <h2>Properties (aka Props)</h2>
@@ -157,17 +143,9 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
       <Slide>
         <h2>Properties (aka Props)</h2>
         <Code highlightedLines='10'>{bookList}</Code>
-        <pre>
-          <a
-            style={{ fontSize: '1.7rem', marginTop: 4 }}
-            target='_blank'
-            rel='noreferrer'
-            href='https://github.com/cap-react-trainings/code-examples/blob/03-conditional-rendering-basic/react-training-codeexamples/src/App.tsx'
-          >
-            🚀 code example on GitHub
-          </a>
-        </pre>
-        <aside className='notes'>map: this is how we iterate over arrays in React (angular ngFor, vue: v-for)</aside>
+        <aside className='notes'>
+          map: this is how we iterate over arrays in React - use javascript inside the TSX Element (angular ngFor, vue: v-for)
+        </aside>
       </Slide>
       <Slide>
         <h2>Properties: not destructured</h2>
@@ -206,18 +184,8 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
       <Slide>
         <h2>💪 Exercise</h2>
         <ul>
-          <li>Implement a small app which renders a list of books (start in App.tsx).</li>
+          <li>Let's implement a small app which renders a list of books.</li>
           <li>There should be a Book-Component which accepts a property of type 'Book'.</li>
-          <li>
-            Find some sample data{' '}
-            <a
-              href='https://github.com/cap-react-trainings/code-examples/blob/02-conditional-rendering-styled-components/react-training-codeexamples/src/testData/Booklist.ts'
-              target='_blank'
-              rel='noreferrer'
-            >
-              here
-            </a>
-          </li>
         </ul>
       </Slide>
       <Slide>
@@ -236,18 +204,8 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
       <Slide>
         <h2>Inline Styling</h2>
         <p className='fragment'>inline styling is also possible via the well known 'style'-attribute</p>
-        <p className='fragment'>notice the double curly braces, usual CSS-syntax inside</p>
+        <p className='fragment'>notice the double curly braces, conventional CSS-syntax inside</p>
         <Code className='fragment'>{stylesAttribute}</Code>
-        <pre className='fragment'>
-          <a
-            style={{ fontSize: '1.7rem', marginTop: 4 }}
-            target='_blank'
-            rel='noreferrer'
-            href='https://github.com/cap-react-trainings/code-examples/blob/02-conditional-rendering-basic/react-training-codeexamples/src/components/book/Book.tsx'
-          >
-            🚀 code example on GitHub
-          </a>
-        </pre>
       </Slide>
       <Slide>
         <h2>CSS in JS</h2>
@@ -285,23 +243,11 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
         <Code className='fragment' highlightedLines='2,7'>
           {styledComponent}
         </Code>
-        <pre className='fragment'>
-          <a
-            style={{ fontSize: '1.7rem', marginTop: 4 }}
-            target='_blank'
-            rel='noreferrer'
-            href='https://github.com/cap-react-trainings/code-examples/blob/02-conditional-rendering-styled-components/react-training-codeexamples/src/components/book/Book.tsx'
-          >
-            🚀 code example on GitHub
-          </a>
-        </pre>
       </Slide>
       <Slide>
         <h2>💪 Exercise</h2>
-        <ul>
-          <li>Our booklist isn't very pretty yet ...</li>
-          <li>Choose one styling-method you've just learned about and style your BookList.</li>
-        </ul>
+
+        <p>Our booklist isn't very pretty yet ...</p>
       </Slide>
     </Chapter>
   );

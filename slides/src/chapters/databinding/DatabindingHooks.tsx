@@ -137,15 +137,12 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
           <li>Hooks</li>
           <li>Databinding</li>
           <li>Databinding and Hooks: influence the component's rendering</li>
-          <li>Custom Hooks</li>
-          <li>useQuery-Hook</li>
         </ul>
       }
     >
       <Slide>
         <h2>Hooks</h2>
         <p>work with React state and lifecycle features from function components</p>
-        <p>No more need for Class Components 😁</p>
         <p>most important React Hooks: useState, useEffect, (useContext, useReducer, useCallback, useMemo, ...)</p>
       </Slide>
       <Slide>
@@ -163,22 +160,12 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
       <Slide>
         <h2>useState-Hook</h2>
         <Code>{useState}</Code>
-        <pre className='fragment'>
-          <a
-            style={{ fontSize: '1.7rem', marginTop: 4 }}
-            target='_blank'
-            rel='noreferrer'
-            href='https://github.com/cap-react-trainings/code-examples/blob/03-hooks-usestate/react-training-codeexamples/src/App.tsx'
-          >
-            🚀 code example on GitHub
-          </a>
-        </pre>
       </Slide>
       <Slide>
         <h2>💪 Exercise</h2>
         <ul>
-          <li>Implement some buttons, that determine how many books should be rendered inside your book-list.</li>
-          <li>As you might have already guessed: the useState-hook is your friend!</li>
+          <li>Let's implement some buttons, that determine how many books should be rendered inside your book-list.</li>
+          <li>As you might have already guessed: the useState-hook is our friend!</li>
         </ul>
       </Slide>
       <Slide>
@@ -193,16 +180,6 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
       <Slide>
         <h2>useEffect-Hook: Data Fetching</h2>
         <Code className='fragment'>{loadingState}</Code>
-        <pre className='fragment'>
-          <a
-            style={{ fontSize: '1.7rem', marginTop: 4 }}
-            target='_blank'
-            rel='noreferrer'
-            href='https://github.com/cap-react-trainings/code-examples/blob/03-hooks-useeffect/react-training-codeexamples/src/App.tsx'
-          >
-            🚀 code example on GitHub
-          </a>
-        </pre>
       </Slide>
       <Slide>
         <h2>useEffect-Hook: Dependency Array</h2>
@@ -224,14 +201,6 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
         </ul>
       </Slide>
       <Slide>
-        <h2>Custom Hooks</h2>
-        <ul>
-          <li className='fragment'>extract component logic into reusable functions</li>
-        </ul>
-        <Code className='fragment'>{useBooks}</Code>
-        <Code className='fragment'>{useBooksHook}</Code>
-      </Slide>
-      <Slide>
         <h2>💪 Exercise</h2>
         <ul>
           <li>
@@ -241,76 +210,26 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
             </a>{' '}
             instead.
           </li>
-          <li>Fetch the books to display from the API.</li>
+          <li>We will fetch the books to display from the API.</li>
           <li>
-            Update your conditional rendering in Book.tsx: Place a badge "cheap" when the book's price is less than 30$, else the badge
-            should display "expensive".
+            Update conditional rendering in Book.tsx: Place a badge "cheap" when the book's price is less than 30$, else the badge should
+            display "expensive".
           </li>
           <li>
-            Since data fetching takes some time, also provide a loading spinner that tells the user you are fetching data while there are no
-            books to display yet.
-          </li>
-          <li>
-            Brownie points: In case you're finished early: learn about the{' '}
-            <a href='https://tanstack.com/query/v4/docs/reference/useQuery?from=reactQueryV3&original=https://react-query-v3.tanstack.com/reference/useQuery'>
-              useQuery-Hook
-            </a>
-            , do some refactoring and implement your datafetching by using useQuery.
+            Since data fetching takes some time, we also need to provide a loading spinner that tells the user there's some data fetching in
+            progress since there is no data to display yet.
           </li>
         </ul>
       </Slide>
       <Slide>
-        <h2>Excursus: useQuery (React Query)</h2>
-        <ul>
-          <li className='fragment'>data-fetching library for React</li>
-          <li className='fragment'>fetching, caching, synchronizing and updating server state in React applications</li>
-          <li className='fragment'>useQuery-Hook: handle various states in the fetching process, e.g. loading, error, data, ...</li>
-          <li className='fragment'>React Query provides further Hooks</li>
-        </ul>
-      </Slide>
-      <Slide>
-        <h2>Excursus: useQuery (React Query)</h2>
-        <Code className='fragment'>{fetchUsers}</Code>
-        <Code className='fragment'>{fetchUsersUseQuery}</Code>
-      </Slide>
-      <Slide>
-        <h2>Excursus: useQuery (React Query)</h2>
-        <p>Response Object</p>
-        <Code className='fragment'>{response}</Code>
-      </Slide>
-      <Slide>
-        <h2>Excursus: useQuery (React Query)</h2>
-        <p>save code, no need to handle states by yourself</p>
-        <Code className='fragment'>{useQueryBooks}</Code>
-        <pre className='fragment'>
-          <a
-            style={{ fontSize: '1.7rem', marginTop: 4 }}
-            target='_blank'
-            rel='noreferrer'
-            href='https://github.com/cap-react-trainings/code-examples/blob/03-hooks-use-query-with-material/react-training-codeexamples/src/components/book-list/BookList.tsx'
-          >
-            🚀 code example on GitHub
-          </a>
-        </pre>
-      </Slide>
-      <Slide>
-        <h2>💪 Homework</h2>
-        <ul>
-          <li>If not done yet: refactor your code and implement the data fetching part by using the useQuery-Hook.</li>
-        </ul>
-      </Slide>
-      <Slide>
-        <h2>Angular Excursus: Observable vs State</h2>
-        <p className='fragment'>When coming from Angular it is often asked what happened to the Observables</p>
-        <p className='fragment'>
-          You just simply don't need them :) The state listening in a useEffect for example is like a simple pipe in Angular
-        </p>
-        <p className='fragment'>However it is possible to have "real" subscribe with mobx for example.</p>
-      </Slide>
-      <Slide>
-        <h2>mobx</h2>
-        <Code>{ObservableMobX}</Code>
-        <p className=''>If you really really need it...</p>
+        <h2>Fin 😎</h2>
+        <p>Get in touch!</p>
+        <a rel='nofollow' href='https://www.qr-code-generator.com'>
+          <img
+            src='https://chart.googleapis.com/chart?cht=qr&chl=MAILTO%3Aanna-maria.auer%40capgemini.com&chs=180x180&choe=UTF-8&chld=L|2'
+            alt=''
+          />
+        </a>
       </Slide>
     </Chapter>
   );

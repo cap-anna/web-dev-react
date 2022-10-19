@@ -9,16 +9,12 @@ import ContextChapter from './chapters/context/ContextChapter';
 import DatabindingHooksChapter from './chapters/databinding/DatabindingHooks';
 import FormsChapter from './chapters/forms/FormsChapter';
 import JsxChapter from './chapters/jsx_tsx/JSX';
-import PerformanceChapter from './chapters/performance/PerformanceChapter';
-import ReactNativeChapter from './chapters/react_native/ReactNative';
-import StorybookChapter from './chapters/storybook/StorybookChapter';
-import TestingChapter from './chapters/testing/TestingChapter';
 import RevealWrapper from './components/reveal/RevealWrapper';
 
 const App: React.FC = () => {
   const chapter = [
     {
-      title: 'Comparison of Frameworks',
+      title: 'Comparison of Frameworks & SPAs in General',
       component: ComparisonChapter
     },
     {
@@ -36,8 +32,11 @@ const App: React.FC = () => {
     {
       title: 'Hooks & Databinding',
       component: DatabindingHooksChapter
-    },
-    {
+    }
+
+    /**
+       * only if there's a lot of time left
+       *  {
       title: 'Context',
       component: ContextChapter
     },
@@ -49,33 +48,13 @@ const App: React.FC = () => {
       title: 'Forms',
       component: FormsChapter
     },
-    // {
-    //   title: 'jo',
-    //   component: PerformanceChapter
-    // },
-    {
-      title: 'Testing',
-      component: TestingChapter
-    },
-    {
-      title: 'Atomic Design & Storybook',
-      component: StorybookChapter
-    },
-    {
-      title: 'Improving Performance',
-      component: PerformanceChapter
-    },
-    {
-      title: 'React Native',
-      component: ReactNativeChapter
-    }
+       */
   ];
 
   return (
     <RevealWrapper>
       <IntroChapter />
       <TableOfContents chapter={chapter} />
-      {/* <ExampleChapter title='Example' index={0} /> */}
       {chapter.map((chapter, index) => (
         <chapter.component key={index} title={chapter.title} index={index + 1} />
       ))}

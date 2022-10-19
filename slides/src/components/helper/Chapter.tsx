@@ -20,10 +20,10 @@ const Chapter: React.FC<ChapterProps> = (props: ChapterProps) => {
         style={{
           position: 'absolute',
           right: 0,
-          writingMode: 'vertical-lr',
           height: '100%',
           color: '#0070ad',
-          opacity: 0.5
+          opacity: 0.5,
+          fontSize: 18
         }}
       >
         {chapterTitle}

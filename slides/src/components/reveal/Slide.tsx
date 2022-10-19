@@ -16,10 +16,10 @@ interface SlideProps {
 const Slide: React.FC<SlideProps> = (props: SlideProps) => {
   return (
     <section
-      data-background-image={props.isMain ? import.meta.env.BASE_URL + '/bg1.svg' : undefined}
+      data-background-image={props.isMain ? '/bg1.svg' : undefined}
       data-background-transition={props.isMain ? 'slide' : undefined}
       // @ts-expect-error not assignable to css props
-      style={props.isMain ? { '--r-heading-color': 'white', color: 'white' } : {}}
+      style={props.isMain ? { '--r-heading-color': 'white', color: 'white' } : { marginTop: 20 }}
       data-auto-animate={props.dataAutoAnimate}
       id={props.id || ''}
       {...props}
